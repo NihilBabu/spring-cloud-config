@@ -1,0 +1,15 @@
+server:
+  port: 8888
+
+#  server.port=8888
+#  spring.cloud.config.server.git.uri=/Users/nihil/Desktop/config-server-repo
+#  spring.cloud.config.server.git.repos.
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/NihilBabu/spring-cloud-config
+          search-paths: config
+          clone-on-start: true
