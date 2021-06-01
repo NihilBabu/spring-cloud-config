@@ -1,0 +1,10 @@
+client:
+  name: Dubai Port 
+  secret: ef34dnfs2apo
+  owner: Tesla Edison
+database:
+  name: port-productions
+  ip: 10.1.0.7
+  username: produser
+disabled-modules:
+  - login
