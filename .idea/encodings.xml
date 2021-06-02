@@ -4,7 +4,7 @@
     <file url="file://$PROJECT_DIR$/aum/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/aum/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hawk-server/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/logics/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/logics/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/logic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/logic/src/main/resources" charset="UTF-8" />
   </component>
 </project>

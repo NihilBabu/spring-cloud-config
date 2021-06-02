@@ -7,4 +7,4 @@ spring:
     name: logic
   cloud:
     config:
-      uri: http://localhost:8081/ logic-dev.yaml
+      uri: http://localhost:8081

@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/aum/aum.iml" filepath="$PROJECT_DIR$/aum/aum.iml" />
       <module fileurl="file://$PROJECT_DIR$/hawk-server/hawk-server.iml" filepath="$PROJECT_DIR$/hawk-server/hawk-server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/logics/logics.iml" filepath="$PROJECT_DIR$/logics/logics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logic/logics.iml" filepath="$PROJECT_DIR$/logic/logics.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spring-cloud-config.iml" filepath="$PROJECT_DIR$/.idea/spring-cloud-config.iml" />
     </modules>
   </component>
