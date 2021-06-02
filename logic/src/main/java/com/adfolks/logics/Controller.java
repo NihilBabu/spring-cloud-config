@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/logic")
 @RefreshScope
 public class Controller {
-    @Value("${client.name}")
+    @Value("${client.adfolks}")
     String clientName;
 
     @RequestMapping("/main")

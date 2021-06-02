@@ -10,3 +10,4 @@ spring:
   config:
     uri: http://localhost:8081
     import:
+  port: 8070
