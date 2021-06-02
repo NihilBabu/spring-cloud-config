@@ -7,26 +7,5 @@ spring:
   cloud:
     config:
       uri: http://localhost:8081
-#  cloud:
-#    config:
-#      uri: http://localhost:8081
-
-
-
-
 client:
   name: nihil
-
-
-#server:
-#  port: 8070
-#spring:
-#  application:
-#    name: logic
-#  profiles:
-#    active: dev
-#  cloud:
-#    config:
-#  config:
-#    uri: http://localhost:8081
-#    import:

@@ -1,13 +1,13 @@
-package com.adfolks.logics;
+package com.adfolks.runlogic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LogicsApplication {
+public class RunlogicApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LogicsApplication.class, args);
+		SpringApplication.run(RunlogicApplication.class, args);
 	}
 
 }

@@ -1,6 +1,0 @@
-spring:
-  application:
-    name: logic
-  cloud:
-    config:
-      uri: http://localhost:8081
