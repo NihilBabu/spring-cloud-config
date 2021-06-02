@@ -9,4 +9,4 @@ spring:
     config:
   config:
     uri: http://localhost:8081
-    import: 
+    import:
