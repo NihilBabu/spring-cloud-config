@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="aum" />
         <module name="logics" />
+        <module name="bar" />
         <module name="hawk-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="aum" target="11" />
+      <module name="bar" target="11" />
       <module name="hawk-server" target="1.8" />
       <module name="logics" target="11" />
     </bytecodeTargetLevel>
@@ -20,6 +22,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="aum" options="-parameters" />
+      <module name="bar" options="-parameters" />
       <module name="hawk-server" options="-parameters" />
       <module name="logics" options="-parameters" />
     </option>
