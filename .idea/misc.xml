@@ -5,6 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/aum/pom.xml" />
         <option value="$PROJECT_DIR$/logics/pom.xml" />
+        <option value="$PROJECT_DIR$/hawk-server/pom.xml" />
       </list>
     </option>
   </component>

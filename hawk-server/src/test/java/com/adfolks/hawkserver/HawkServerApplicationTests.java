@@ -1,10 +1,10 @@
-package com.adfolks.config_server;
+package com.adfolks.hawkserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ConfigServerApplicationTests {
+class HawkServerApplicationTests {
 
 	@Test
 	void contextLoads() {
