@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/aum/aum.iml" filepath="$PROJECT_DIR$/aum/aum.iml" />
-      <module fileurl="file://$PROJECT_DIR$/bar/bar.iml" filepath="$PROJECT_DIR$/bar/bar.iml" />
       <module fileurl="file://$PROJECT_DIR$/hawk-server/hawk-server.iml" filepath="$PROJECT_DIR$/hawk-server/hawk-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/runlogic/runlogic.iml" filepath="$PROJECT_DIR$/runlogic/runlogic.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spring-cloud-config.iml" filepath="$PROJECT_DIR$/.idea/spring-cloud-config.iml" />

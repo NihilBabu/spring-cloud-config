@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="aum" />
         <module name="runlogic" />
-        <module name="bar" />
         <module name="hawk-server" />
       </profile>
     </annotationProcessing>
