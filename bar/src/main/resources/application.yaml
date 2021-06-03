@@ -1,11 +1,10 @@
 server:
-  port: 8077
+  port: 8083
 
 spring:
+  profiles:
+    active: dev
   application:
-    name: logic
-  cloud:
-    config:
-      uri: http://localhost:8081
-client:
-  name: nihil
+    name: bar
+  config:
+    import: optional:configserver:http://localhost:8090
