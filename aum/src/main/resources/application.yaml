@@ -1,10 +1,10 @@
 server:
-  port: 8083
+  port: 8082
 
 spring:
   profiles:
     active: dev
   application:
-    name: bar
+    name: aum
   config:
     import: optional:configserver:http://localhost:8090
