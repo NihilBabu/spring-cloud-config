@@ -9,4 +9,4 @@ spring:
   application:
     name: hawk-server
 server:
-  port: 8090
+  port: 8080
