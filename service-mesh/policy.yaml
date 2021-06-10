@@ -1,0 +1,26 @@
+apiVersion: security.istio.io/v1beta1
+kind: RequestAuthentication
+metadata:
+  name: httpbin
+  namespace: foo
+spec:
+  selector:
+    matchLabels:
+      app: httpbin
+  jwtRules:
+  - issuer: "issuer-foo"
+    jwksUri: http://keycloak.default.svc.cluster.local:8080/auth/realms/master/protocol/openid-connect/certs
+---
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: httpbin
+  namespace: foo
+spec:
+  selector:
+    matchLabels:
+      app: httpbin
+  rules:
+  - from:
+    - source:
+        requestPrincipals: ["*"]
