@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: hawk-virtual-service
+  name: keycloak-virtual-service
   namespace: hawk
 spec:
   hosts:
@@ -15,19 +15,17 @@ spec:
     route:
     - destination: 
         host: keycloak.default.svc.cluster.local
-  - match:
-     - uri:
-        prefix: "/logic"
-    rewrite:
-      uri: "/"
-    route:
-    - destination: 
-        host: runlogic-service.hawk.svc.cluster.local
-  - match:
-     - uri:
-        prefix: "/hawk"
-    rewrite:
-      uri: "/"
-    route:
-    - destination: 
-        host: hawk-server-service.hawk.svc.cluster.local
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: logic-virutal-service
+spec:
+  hosts:
+    - "runlogic-service.hawk.svc.cluster.local"
+  http:
+    - route:
+        - destination:
+            host: runlogic-service
+            port:
+              number: 80
