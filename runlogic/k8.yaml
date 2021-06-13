@@ -43,6 +43,7 @@ spec:
     app: runlogic
     env: test
   ports:
-    - protocol: TCP
+    - name: http
+      protocol: TCP
       port: 80
       targetPort: 8081
