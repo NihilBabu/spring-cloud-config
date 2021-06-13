@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: my-app-gateway
+  name: hawk-app-gateway
   namespace: hawk
 spec:
   selector:
