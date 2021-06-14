@@ -4,10 +4,6 @@ metadata:
   name: logic-app
   namespace: hawk
 spec:
-#  selector:
-#    matchLabels:
-#      app: runlogic
-#      env: test
   jwtRules:
   - issuer: http://192.168.3.0/auth/realms/hawk
     jwksUri: http://keycloak.default.svc.cluster.local:8080/auth/realms/hawk/protocol/openid-connect/certs
