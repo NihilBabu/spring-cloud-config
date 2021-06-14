@@ -22,7 +22,7 @@ spec:
   rules:
     - from:
         - source:
-            namespaces: ["hawk"]
+            namespaces: ["hawk","falcon"]
 
 ---
 apiVersion: security.istio.io/v1beta1
