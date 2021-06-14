@@ -1,3 +1,5 @@
+timeservice:
+  url: http://time-service
 client:
   name: Alerts Main Application
   secret: 2234e3rdfc343

@@ -1,3 +1,5 @@
+timeservice:
+  url: http://time-service
 client:
   name: Alerts Main Application
   secret: ef34dnfs2apo
