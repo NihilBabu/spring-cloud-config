@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: runlogic
+  name: alerts
   namespace: hawk
   labels:
-    app: runlogic
+    app: alerts
     env: test
 spec:
   selector:
     matchLabels:
-      app: runlogic
+      app: alerts
       env: test
   template:
     metadata:
       labels:
-        app: runlogic
+        app: alerts
         env: test
     spec:
       containers:
-        - name: runlogic
-          image: tibinlukose/runlogic:1.2
+        - name: alerts
+          image: tibinlukose/alerts:1.2
           ports:
             - containerPort: 8080
           livenessProbe:
@@ -36,11 +36,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: runlogic-service
+  name: alerts-service
   namespace: hawk
 spec:
   selector:
-    app: runlogic
+    app: alerts
     env: test
   ports:
     - appProtocol: http
