@@ -20,23 +20,35 @@ apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
   name: logic-virutal-service
+  namespace: hawk
 spec:
   hosts:
-    - "runlogic-service.hawk.svc.cluster.local"
+    # - "runlogic-service.hawk.svc.cluster.local"
+    - "*"
+  gateways:
+    - hawk-app-gateway
   http:
     - route:
         - destination:
             host: runlogic-service
             port:
               number: 80
+      match:
+        - uri:
+            prefix: "/logic"
+      name: logic-service-route
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
   name: hawk-virutal-service
+  namespace: hawk
 spec:
   hosts:
     - "hawk-server-service.hawk.svc.cluster.local"
+    # - "*"
+  # gateways:
+  #   - hawk-app-gateway
   http:
     - route:
         - destination:
