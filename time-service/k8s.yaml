@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: time-service
+  namespace: falcon
+spec:
+  selector:
+    matchLabels:
+      app: time-service
+  template:
+    metadata:
+      labels:
+        app: time-service
+        env: test
+    spec:
+      containers:
+      - name: time-service
+        image: nihilbabu/istiotest:1.0
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+        ports:
+        - containerPort: 3000
+        env:
+          - name: SERVICE_NAME
+            value: "time-service-test"
+          - name: UPSTREAM_URI
+            value: "http://time.jsontest.com/"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: time-service
+  namespace: falcon
+spec:
+  selector:
+    app: time-service
+    env: test
+  ports:
+    - appProtocol: http
+      name: http
+      protocol: TCP
+      port: 80
+      targetPort: 3000
