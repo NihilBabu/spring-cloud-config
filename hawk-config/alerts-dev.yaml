@@ -1,0 +1,10 @@
+client:
+  name: Alerts Main Application
+  secret: 2234e3rdfc343
+  owner: Ford Motors
+database:
+  name: ford-development
+  ip: 10.12.12.1
+  username: dev-user
+disabled-modules:
+  - login

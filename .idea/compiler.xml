@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="aum" />
+        <module name="alerts" />
         <module name="runlogic" />
         <module name="hawk-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="alerts" target="1.8" />
       <module name="aum" target="11" />
       <module name="bar" target="11" />
       <module name="hawk-server" target="1.8" />
@@ -20,6 +22,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="alerts" options="-parameters" />
       <module name="aum" options="-parameters" />
       <module name="bar" options="-parameters" />
       <module name="hawk-server" options="-parameters" />

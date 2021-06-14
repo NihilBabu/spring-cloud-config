@@ -1,0 +1,10 @@
+client:
+  name: Alerts Main Application
+  secret: ef34dnfs2apo
+  owner: Ford Motors
+database:
+  name: ford-productions
+  ip: 10.1.0.1
+  username: produser
+disabled-modules:
+  - login

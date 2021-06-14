@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/alerts/alerts.iml" filepath="$PROJECT_DIR$/alerts/alerts.iml" />
       <module fileurl="file://$PROJECT_DIR$/aum/aum.iml" filepath="$PROJECT_DIR$/aum/aum.iml" />
       <module fileurl="file://$PROJECT_DIR$/hawk-server/hawk-server.iml" filepath="$PROJECT_DIR$/hawk-server/hawk-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/runlogic/runlogic.iml" filepath="$PROJECT_DIR$/runlogic/runlogic.iml" />
