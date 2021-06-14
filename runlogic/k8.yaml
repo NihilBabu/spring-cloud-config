@@ -21,15 +21,15 @@ spec:
         - name: runlogic
           image: tibinlukose/runlogic:1.2
           ports:
-            - containerPort: 8081
+            - containerPort: 8080
           livenessProbe:
             tcpSocket:
-              port: 8081
+              port: 8080
             initialDelaySeconds: 5
             periodSeconds: 5
           readinessProbe:
             tcpSocket:
-              port: 8081
+              port: 8080
             initialDelaySeconds: 5
             periodSeconds: 5
 ---
@@ -47,4 +47,4 @@ spec:
       name: dummy
       protocol: TCP
       port: 80
-      targetPort: 8081
+      targetPort: 8080

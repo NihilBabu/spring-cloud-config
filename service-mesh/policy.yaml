@@ -10,7 +10,7 @@ spec:
 #      env: test
   jwtRules:
   - issuer: http://192.168.3.0/auth/realms/hawk
-    jwksUri: http://192.168.3.0/auth/realms/hawk/protocol/openid-connect/certs
+    jwksUri: http://keycloak.default.svc.cluster.local:8080/auth/realms/hawk/protocol/openid-connect/certs
 ---
 apiVersion: security.istio.io/v1beta1
 kind: AuthorizationPolicy
@@ -27,3 +27,28 @@ spec:
     - from:
         - source:
             namespaces: ["hawk"]
+
+---
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: logic-service
+  namespace: hawk
+spec:
+  selector:
+    matchLabels:
+      app: runlogic
+      env: test
+  action: ALLOW
+  rules:
+    - from:
+        - source:
+            requestPrincipals: ["*"]
+            # namespaces: ["hawk"]
+      to:
+        - operation:
+            methods: ["GET"]
+            paths: ["/logic/test"]
+      when:
+      - key: request.auth.claims[resource_access][hawk][roles]
+        values: ["logic-test-read"]
