@@ -100,14 +100,14 @@ spec:
     # - "alert-service.falcon.svc.cluster.local"
     - "*"
   gateways:
-    - hawk-app-gateway
+    - hawk/hawk-app-gateway
   http:
     - route:
         - destination:
-            host: time-service
+            host: alerts-service
             port:
               number: 80
-      name: time-service-route
+      name: alert-service-route
       match:
       - uri :
           prefix: "/alert"
