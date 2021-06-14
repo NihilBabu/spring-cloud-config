@@ -110,6 +110,6 @@ spec:
       name: alert-service-route
       match:
       - uri :
-          prefix: "/alert"
-      rewrite:
-        uri: "/"
+          prefix: "/alerts"
+      # rewrite:
+      #   uri: "/"

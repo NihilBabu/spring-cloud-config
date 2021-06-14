@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: time-service
-        image: nihilbabu/istiotest:1.0
+        image: docker.io/nihilbabu/time-service:1.0
         imagePullPolicy: IfNotPresent
         resources:
           limits:
