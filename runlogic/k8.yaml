@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: runlogic
-          image: tibinlukose/runlogic:1.0
+          image: tibinlukose/runlogic:1.2
           ports:
             - containerPort: 8081
           livenessProbe:
@@ -43,7 +43,8 @@ spec:
     app: runlogic
     env: test
   ports:
-    - name: http
+    - appProtocol: http
+      name: dummy
       protocol: TCP
       port: 80
       targetPort: 8081

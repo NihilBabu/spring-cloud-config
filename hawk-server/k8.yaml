@@ -34,5 +34,7 @@ spec:
     env: test
   ports:
     - protocol: TCP
+      appProtocol: http
+      name: hawk-port
       port: 8080
       targetPort: 8080

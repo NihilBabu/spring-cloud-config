@@ -4,18 +4,26 @@ metadata:
   name: logic-app
   namespace: hawk
 spec:
-  selector:
-    matchLabels:
-      app: runlogic
-      env: test
+#  selector:
+#    matchLabels:
+#      app: runlogic
+#      env: test
   jwtRules:
   - issuer: http://192.168.3.0/auth/realms/hawk
-    jwksUri: https://www.googleapis.com/oauth2/v3/certs
+    jwksUri: http://192.168.3.0/auth/realms/hawk/protocol/openid-connect/certs
 ---
 apiVersion: security.istio.io/v1beta1
 kind: AuthorizationPolicy
 metadata:
-  name: logic-app
+  name: hawk-server
   namespace: hawk
 spec:
-  {}
+  selector:
+    matchLabels:
+      app: hawk-server
+      env: test
+  action: ALLOW
+  rules:
+    - from:
+        - source:
+            namespaces: ["hawk"]

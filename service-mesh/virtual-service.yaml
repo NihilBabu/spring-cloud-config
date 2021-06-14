@@ -29,3 +29,23 @@ spec:
             host: runlogic-service
             port:
               number: 80
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: hawk-virutal-service
+spec:
+  hosts:
+    - "hawk-server-service.hawk.svc.cluster.local"
+  http:
+    - route:
+        - destination:
+            host: hawk-server-service
+            port:
+              number: 8080
+      match:
+      - uri :
+          prefix: "/hawk"
+      rewrite:
+        uri: "/"
+      name: hawk-server-route
