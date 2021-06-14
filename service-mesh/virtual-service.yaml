@@ -71,7 +71,7 @@ metadata:
   namespace: falcon
 spec:
   hosts:
-    - "time-service.hawk.svc.cluster.local"
+    - "time-service.falcon.svc.cluster.local"
     # - "*"
   # gateways:
   #   - hawk-app-gateway
@@ -88,3 +88,28 @@ spec:
       # rewrite:
       #   uri: "/"
       
+---
+
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: alert-virutal-service
+  namespace: falcon
+spec:
+  hosts:
+    # - "alert-service.falcon.svc.cluster.local"
+    - "*"
+  gateways:
+    - hawk-app-gateway
+  http:
+    - route:
+        - destination:
+            host: time-service
+            port:
+              number: 80
+      name: time-service-route
+      match:
+      - uri :
+          prefix: "/alert"
+      rewrite:
+        uri: "/"
