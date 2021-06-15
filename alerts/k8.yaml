@@ -19,7 +19,10 @@ spec:
     spec:
       containers:
         - name: alerts
-          image: tibinlukose/alerts:1.3
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: test
+          image: tibinlukose/alerts:1.7
           ports:
             - containerPort: 8080
           livenessProbe:
